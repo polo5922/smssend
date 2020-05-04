@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "SMS sending apps",
+    "description": "app for SADE",
+    "version": "1.0",
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "tabs",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_icon": "img/logo.png",
+        "default_popup": "popup.html"
+    },
+    "icons":{
+        "128" : "img/logo_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://messages.google.com/*"],
+            "js": ["js/jquery.js","js/jquerry_tester.js"]
+        }
+    ]
+}
